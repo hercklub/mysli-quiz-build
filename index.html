@@ -27,13 +27,14 @@
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
 
+ 
 
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Quiz.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Quiz.data.gz",
-        frameworkUrl: buildUrl + "/Quiz.framework.js.gz",
-        codeUrl: buildUrl + "/Quiz.wasm.gz",
+        dataUrl: buildUrl + "/Quiz.data",
+        frameworkUrl: buildUrl + "/Quiz.framework.js",
+        codeUrl: buildUrl + "/Quiz.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "QuizMimo",
@@ -78,7 +79,6 @@
           progressBarFull.style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
-
               }).catch((message) => {
                 alert(message);
               });
@@ -87,5 +87,5 @@
       document.body.appendChild(script);
 
     </script>
-</body>
+  </body>
 </html>
